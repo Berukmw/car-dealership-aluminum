@@ -50,6 +50,6 @@ private Vehicle vehicle;
     }
 
     // contract payment methods
-    public abstract double getTotalPrice();
+public abstract double getTotalPrice();
 public abstract double getMonthlyPayment();
 }
