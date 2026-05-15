@@ -1,44 +1,46 @@
 package com.pluralsight.models;
 
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SalesContractTest
-{
+class SalesContractTest {
 
-    @org.junit.jupiter.api.Test
-    void isFinance()
-    {
-        assertTrue(true);
+    Vehicle vehicle = new Vehicle(10001, 1993, "Ford", "Explorer", "SUV", "Red", 182451, 3495.00);
+    SalesContract contract = new SalesContract("20210928", "Fred Wyatt", "fred@texas.com", vehicle, true);
+
+    double result = contract.getMonthlyPayment();
+
+    @Test
+    void isFinance() {
     }
 
-    @org.junit.jupiter.api.Test
-    void setFinance()
-    {
-
+    @Test
+    void setFinance() {
     }
 
-    @org.junit.jupiter.api.Test
-    void getSalesTax()
-    {
-
+    @Test
+    void getSalesTax() {
+        System.out.println("Sales tax " + contract.getSalesTax());
     }
 
-    @org.junit.jupiter.api.Test
-    void getRecordFee()
-    {
-
+    @Test
+    void getRecordFee() {
+        System.out.println("Recording fee " + contract.getRecordFee());
     }
 
-    @org.junit.jupiter.api.Test
-    void getProcessingFee()
-    {
-
+    @Test
+    void getProcessingFee() {
+        System.out.println("Processing fee " + contract.getProcessingFee());
     }
 
-    @org.junit.jupiter.api.Test
-    void getTotalPrice()
-    {
+    @Test
+    void getTotalPrice() {
+        System.out.println("Total price " + contract.getTotalPrice());
+    }
 
+    @Test
+    void getMonthlyPayment() {
+        System.out.println("Monthly payment: " + contract.getMonthlyPayment());
     }
 }
